@@ -2,8 +2,8 @@
 
 <sub>Documentation drafted with claude.ai</sub>
 
-A WPF desktop app for invoicing. `MainWindow` acts as a shell and swaps user
-controls into it - login first, then the home screen.
+A WPF desktop app for invoicing, in progress. `MainWindow` acts as a shell that
+hosts user controls, loading `LoginView` on startup.
 
 ## Running it
 
@@ -21,5 +21,11 @@ Requires .NET 9 on Windows.
 ## Layout
 
 - `MainWindow.xaml` - shell, hosts the active view
-- `LoginView.xaml` - password entry
-- `HomeScreenView.xaml` - post-login screen
+- `LoginView.xaml` - password entry, checked against the environment variable
+- `HomeScreenView.xaml` - post-login screen, scaffolded but not yet wired up
+
+## State
+
+Login currently reports success or failure in a message box; swapping the shell
+over to `HomeScreenView` is the next step and is stubbed out in
+`MainWindow.xaml.cs`.
